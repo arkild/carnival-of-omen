@@ -19,3 +19,6 @@ A full-stack web application with attractions, magic, and a guestbook
 | /magicshow/magic    | create     | POST      | create       | hocuspocus.ejs    | No           |
 | /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |
 | /*                  |            | GET       |              | 404.ejs           | No           |
+
+## Credits
+All magic show images are from stickpng.com, except for the rabbit image which is from purepng.com

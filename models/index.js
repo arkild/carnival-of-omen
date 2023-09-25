@@ -11,5 +11,6 @@ db.on('connected', function() {
 })
 
 module.exports = {
-    Guestbook: require('./guestbook')
+    Guestbook: require('./guestbook'), Magic: require('./magicshow')
+    //I initially did "require('./magic')", completely forgetting that the requirements need filenames.
 };
