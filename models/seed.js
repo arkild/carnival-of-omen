@@ -1,4 +1,6 @@
-const entries = [
+const seedData = {
+//This seed data is processed as an object so I can access each seed as a key in server.js
+guestbook: [
     //DateAdded is going to be looked and and modified later.
     {
         name: "Patruck",
@@ -23,9 +25,9 @@ const entries = [
         entryTitle: "What is this nonsense?",
         haveFun: "No",
         description: "What a creepy place. I'm getting really weird vibes from it and have been on edge since I arrived. As soon as I'm done writing this entry, I'm out of here and never coming back!"
-    }
-]
-const subjects = [
+    }],
+    
+subjects:[
     {
         name: "Lenny",
         species: "Rabbit",
@@ -45,9 +47,9 @@ const subjects = [
         name: "Camo",
         species: "Zebra",
         image: "/assets/zebra.png"
-    }
-]
+    }]
+}
 
 //Export this seed data to models/index.js
 //We're going to try exporting two seeds simultaneously.
-module.exports = entries, subjects
+module.exports = seedData

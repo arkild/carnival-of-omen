@@ -37,3 +37,24 @@ app.get('/', function(req, res) {
 app.listen(process.env.PORT, function (){
     console.log('Express is on port', process.env.PORT);
 })
+//Seed the collections when a get request is sent to /seed.
+app.get('/seed', function(req, res) {
+    //Remove all current entries from one database...
+    db.Guestbook.deleteMany({})
+        .then(removedEntries => {
+            console.log(`Removed ${removedEntries.deletedCount} guestbook entries.`)
+            db.Guestbook.insertMany(db.seedData.guestbook)
+                .then(addedEntries => {
+                    console.log(`Added ${addedEntries.length} guestbook entries to the database.`)
+                })
+        })
+    // And the other.
+    db.Magic.deleteMany({})
+        .then(removedSubjects => {
+            console.log(`Removed ${removedSubjects.deletedCount} magic participants.`)
+            db.Magic.insertMany(db.seedData.subjects)
+                .then(addedEntries => {
+                    console.log(`Added ${addedEntries.length} magicshow subjects to the database.`)
+                })
+        })
+})
