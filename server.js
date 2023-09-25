@@ -5,6 +5,11 @@ const express = require('express');
 const livereload = require('livereload');
 const connectLiveReload = require('connect-livereload');
 
+//This requires the routes in the controllers folder
+const guestCtrl = require('./controllers/guestbook')
+// const magicCtrl = require('./controllers/magicshow')
+// ^ I'll comment this back in when we get to routing it.
+
 //Require DB connection, models, and seed data.
 const db = require('./models');
 //Require Express.
@@ -37,6 +42,7 @@ app.get('/', function(req, res) {
 app.listen(process.env.PORT, function (){
     console.log('Express is on port', process.env.PORT);
 })
+
 //Seed the collections when a get request is sent to /seed.
 app.get('/seed', function(req, res) {
     //Remove all current entries from one database...
@@ -58,3 +64,8 @@ app.get('/seed', function(req, res) {
                 })
         })
 })
+
+//These next 2 lines tell server.js to reference our controllers if it finds routes that begin with the controller names.
+app.use('/guestbook', guestCtrl)
+// app.use('/magicshow', magicCtrl)
+// ^ I'll comment this back in when we get to coding it.
