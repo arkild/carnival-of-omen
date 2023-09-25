@@ -7,5 +7,9 @@ mongoose.connect(process.env.MONGODBURI);
 const db = mongoose.connection
 
 db.on('connected', function() {
-    console.log(`Mongo DB ${db.name} is connected at ${db.host}:${port}.`)
+    console.log(`Mongo DB ${db.name} is connected at ${db.host}:${db.port}.`)
 })
+
+module.exports = {
+    Guestbook: require('./guestbook')
+};
