@@ -20,6 +20,13 @@ router.get('/new', (req, res) => {
     res.send(`This will generate a form for guestbook entries`)
 })
 
+//Create Route (localhost:3000/guestbook/create)
+//This route will create a new guestbook entry and then re-direct to the guestbook page.
+router.post('/', (req, res) => {
+    db.Guestbook.create(req.body)
+        .then(entry => res.json(entry))
+})
+
 //Show Route (localhost:3000/guestbook/ID)
 //The ID is a wildcard eater, so it has to go below all routes that are specific.
 router.get('/:id', function (req, res) {

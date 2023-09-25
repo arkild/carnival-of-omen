@@ -19,7 +19,16 @@ router.get('/creation', (req, res) => {
     res.send(`This will redirect to a page for making magic show participants.`)
 })
 
+//Create Route (localhost:3000/magicshow/magic)
+//Rather than re-direct to the list of subject, we are re-directing to an intermediary page that will display some magic mumbo-jumbo and then after a certain period of time will redirect to where we need it to go.
+router.post('/magic', (req, res) => {
+    db.Magic.create(req.body)
+        .then(subject => res.json(subject))
+        //This will just render the hocus-pocus.ejs file. That page will issue the re-direct separate from this.
+})
+
 //We're not showing details on this controller, so a Show route is not required.
+//We're also not editing our subjects. We're either making them appear or disappear. That's it.
 
 //Can't access this in server.js without doing this command here
 module.exports = router
