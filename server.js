@@ -8,7 +8,6 @@ const connectLiveReload = require('connect-livereload');
 //This requires the routes in the controllers folder
 const guestCtrl = require('./controllers/guestbook')
 const magicCtrl = require('./controllers/magicshow')
-// ^ I'll comment this back in when we get to routing it.
 
 //Require DB connection, models, and seed data.
 const db = require('./models');
@@ -33,10 +32,18 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 app.use(connectLiveReload());
 
-//Mount Routes
+//Mount Routes (The ones not in controllers)
+//Home Page
 app.get('/', function(req, res) {
     res.send('Carnival of Omen')
 })
+
+//The main menu or amusement selection
+app.get('/attractions', function(req, res) {
+    res.send('This will be the page for attractions.')
+})
+
+
 
 //This gets the app to listen on the specified port we've documented in the environment file.
 app.listen(process.env.PORT, function (){
@@ -68,4 +75,9 @@ app.get('/seed', function(req, res) {
 //These next 2 lines tell server.js to reference our controllers if it finds routes that begin with the controller names.
 app.use('/guestbook', guestCtrl)
 app.use('/magicshow', magicCtrl)
-// ^ I'll comment this back in when we get to coding it.
+
+//404 Route
+//Has to be at the ABSOLUTE BOTTOM or it soaks up everything, even the controllers
+app.get('/*', function(req, res) {
+    res.send('Are you lost? 404.')
+})

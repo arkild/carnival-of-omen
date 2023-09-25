@@ -5,7 +5,7 @@ A full-stack web application with attractions, magic, and a guestbook
 | URL                 | REST Route | HTTP Verb | CRUD Action  | EJS View(s)       | View Created?| Route tested?|
 |---------------------|------------|-----------|--------------|-------------------|--------------|--------------|
 | /                   |            | GET       | read         | home.ejs          | No           |**Yes**       |
-| /directory          |            | GET       | read         | attractions.ejs   | No           |              |
+| /attractions        |            | GET       | read         | attractions.ejs   | No           |**Yes**       |
 | /guestbook          | index      | GET       | read         | entry-index.ejs   | No           |**Yes**       |
 | /guestbook/:id      | show       | GET       | read         | entry-details.ejs | No           |**Yes**       |
 | /guestbook/:id      | update     | PATCH/PUT | update       |                   |              |              |
@@ -18,7 +18,7 @@ A full-stack web application with attractions, magic, and a guestbook
 | /magicshow/creation | new        | GET       |              | new-creation.ejs  | No           |              |
 | /magicshow/magic    | create     | POST      | create       | hocuspocus.ejs    | No           |              |
 | /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |              |
-| /*                  |            | GET       |              | 404.ejs           | No           |              |
+| /*                  |            | GET       |              | 404.ejs           | No           |**Yes**       |
 
 ## Credits
 All magic show images are from stickpng.com, except for the rabbit image which is from purepng.com
