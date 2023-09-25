@@ -7,7 +7,7 @@ const connectLiveReload = require('connect-livereload');
 
 //This requires the routes in the controllers folder
 const guestCtrl = require('./controllers/guestbook')
-// const magicCtrl = require('./controllers/magicshow')
+const magicCtrl = require('./controllers/magicshow')
 // ^ I'll comment this back in when we get to routing it.
 
 //Require DB connection, models, and seed data.
@@ -67,5 +67,5 @@ app.get('/seed', function(req, res) {
 
 //These next 2 lines tell server.js to reference our controllers if it finds routes that begin with the controller names.
 app.use('/guestbook', guestCtrl)
-// app.use('/magicshow', magicCtrl)
+app.use('/magicshow', magicCtrl)
 // ^ I'll comment this back in when we get to coding it.

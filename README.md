@@ -14,7 +14,7 @@ A full-stack web application with attractions, magic, and a guestbook
 | /guestbook          | create     | POST      | create       |                   |              |              |
 | /guestbook/:id/edit | edit       | GET       | read         | edit-entry.ejs    | No           |              |
 | /seed               |            | GET       | delete&create|                   |              |**Yes**       |
-| /magicshow          | index      | GET       | read         | magicshow.ejs     | No           |              |
+| /magicshow          | index      | GET       | read         | magicshow.ejs     | No           |**Yes**       |
 | /magicshow/creation | new        | GET       |              | new-creation.ejs  | No           |              |
 | /magicshow/magic    | create     | POST      | create       | hocuspocus.ejs    | No           |              |
 | /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |              |
