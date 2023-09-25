@@ -14,6 +14,11 @@ router.get('/', function(req, res) {
         .then(entries => res.json(entries))
 })
 
+//New Route (localhost:3000/magicshow/creation)
+router.get('/creation', (req, res) => {
+    res.send(`This will redirect to a page for making magic show participants.`)
+})
+
 //We're not showing details on this controller, so a Show route is not required.
 
 //Can't access this in server.js without doing this command here

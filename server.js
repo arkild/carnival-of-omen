@@ -32,6 +32,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 app.use(connectLiveReload());
 
+//request.body parser to use for post/put/patch.
+app.use(express.urlencoded({extended: true}));
+
 //Mount Routes (The ones not in controllers)
 //Home Page
 app.get('/', function(req, res) {

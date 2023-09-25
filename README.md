@@ -10,12 +10,12 @@ A full-stack web application with attractions, magic, and a guestbook
 | /guestbook/:id      | show       | GET       | read         | entry-details.ejs | No           |**Yes**       |
 | /guestbook/:id      | update     | PATCH/PUT | update       |                   |              |              |
 | /guestbook/:id      | destroy    | DELETE    | delete       |                   |              |              |
-| /guestbook/new      | new        | GET       |              | new-entry.ejs     | No           |              |
+| /guestbook/new      | new        | GET       |              | new-entry.ejs     | No           |**Yes**       |
 | /guestbook          | create     | POST      | create       |                   |              |              |
 | /guestbook/:id/edit | edit       | GET       | read         | edit-entry.ejs    | No           |              |
 | /seed               |            | GET       | delete&create|                   |              |**Yes**       |
 | /magicshow          | index      | GET       | read         | magicshow.ejs     | No           |**Yes**       |
-| /magicshow/creation | new        | GET       |              | new-creation.ejs  | No           |              |
+| /magicshow/creation | new        | GET       |              | new-creation.ejs  | No           |**Yes**       |
 | /magicshow/magic    | create     | POST      | create       | hocuspocus.ejs    | No           |              |
 | /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |              |
 | /*                  |            | GET       |              | 404.ejs           | No           |**Yes**       |
