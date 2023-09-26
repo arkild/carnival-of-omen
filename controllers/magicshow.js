@@ -11,7 +11,7 @@ const db = require('../models')
 //Index Route (localhost:3000/magicshow)
 router.get('/', function(req, res) {
     db.Magic.find({})
-        .then(entries => res.json(entries))
+        .then(subjects => res.render('magic/magicshow', {subjects: subjects}))
 })
 
 //New Route (localhost:3000/magicshow/creation)

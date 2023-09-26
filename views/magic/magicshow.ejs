@@ -1,1 +1,42 @@
 <!-- This page is a display of all the subjects someone can make disappear, as well as a link to make your own creations. (For the sake of a visual option, I think I'm going to just do a bunch of pictures for someone to choose something to make.) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head.ejs', {title: `The Magic Show!`}) %>
+    <link rel="stylesheet" href="/styles/magicshow.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <section class="titlecard">
+        <h1>Welcome to the Magic Show!</h1>
+        <h3>Here you can make things appear and disappear before your very eyes!</h3>
+        <a href="magic/creation">Check out over here if you want to make your own creation!</a>
+    </section>
+
+    <main>
+        <section class="subjects">
+            <ul>
+                <% for (let subject of subjects) { %>
+                    <div class="victims">
+                        <li>
+                            <figure class="victim">
+                                <img src="<%= subject.image %>">
+                                <figcaption>
+                                    <h4><%= subject.name %> the <%= subject.species %></h4>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </div>
+                <% } %>
+            </ul>
+            
+        </section>
+    </main>
+
+
+</body>
+
+
+</html>
