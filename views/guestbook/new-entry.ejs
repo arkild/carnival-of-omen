@@ -1,6 +1,38 @@
 <!-- This view is how you create an entry for the guestbook. It will be similar to edit-entry in fields but the fields will not be pre-filled. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs', {title: `Sign the Guestbook`})
+        <!-- <link rel="stylesheet" href="*"> -->
+    </head>
 
+    <body>
+        <%- include('../partials/nav.ejs') %>
+
+        <section class="topofpage">
+            <h1>Sign the Guestbook!</h1>
+            <h3>Go ahead and fill out this guestbook entry and tell us about your fun experience here!</h3>
+        </section>
+
+        <form method="POST" action="/guestbook">
 <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
 <!-- Title of entry -->
+            <label for="entryTitle">Title of Entry:</label>
+            <input type="text" id="entry-title" name="entryTitle" required>
+            <br>
 <!-- Did you have fun? (Yes/No). This is a dropdown but the dropdown only has one choice, which is "Yes".-->
+            <label for="haveFun">Did you have fun?</label>
+            <optgroup label="Please select:">
+                <option value="Yes">Yes</option>
+            </optgroup>
 <!-- Tell us about your experience -->
+            <label for="description">Tell us about your experience!</label>
+            <textarea type="text" id="description" name="description"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
