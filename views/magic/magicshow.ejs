@@ -25,6 +25,7 @@
                                 <img src="<%= subject.image %>">
                                 <figcaption>
                                     <h4><%= subject.name %> the <%= subject.species %></h4>
+                                    <form method="POST" action="magicshow/magic/<%=subject._id%>?_method=DELETE"><input class="btn" type="submit" value="Make Disappear" /></form>
                                 </figcaption>
                             </figure>
                         </li>
