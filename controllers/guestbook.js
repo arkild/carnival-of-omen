@@ -58,7 +58,7 @@ router.delete('/:id', (req, res) => {
 //The ID is a wildcard eater, so it has to go below all routes that are specific.
 router.get('/:id', function (req, res) {
     db.Guestbook.findById(req.params.id)
-        .then(entry => res.json(entry))
+        .then(entry => res.render('guestbook/entry-details', {entry: entry}))
         //This is returning 'null' currently. When we get to rendering pages, we'll see what happens.
         .catch(() => res.render('404'))
 })
