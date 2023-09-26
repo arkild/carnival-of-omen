@@ -40,7 +40,7 @@ app.use(express.urlencoded({extended: true}));
 //Mount Routes (The ones not in controllers)
 //Home Page
 app.get('/', function(req, res) {
-    res.send('Carnival of Omen')
+    res.render('home')
 })
 
 //The main menu or amusement selection
