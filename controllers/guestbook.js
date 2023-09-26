@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 router.get('/:id/edit', (req, res) => {
     db.Guestbook.findById(req.params.id)
         .then(entry => res.send(`This will show the editing details for ${entry.name}'s entry.`))
-        .catch(() => res.send('insert 404 catch-all here'))
+        .catch(() => res.render('404'))
 })
 
 //Update route (localhost:3000/guestbook/ID)
@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     db.Guestbook.findByIdAndRemove(req.params.id)
         .then(entry => res.send(`Successfully removed ${entry.name}'s entry from the guestbook.`))
-        .catch(() => res.send('insert 404 catch-all here'))
+        .catch(() => res.render('404'))
 })
 
 //Show Route (localhost:3000/guestbook/ID)
@@ -60,7 +60,7 @@ router.get('/:id', function (req, res) {
     db.Guestbook.findById(req.params.id)
         .then(entry => res.json(entry))
         //This is returning 'null' currently. When we get to rendering pages, we'll see what happens.
-        .catch(() => res.send('404: Page not found'))
+        .catch(() => res.render('404'))
 })
 
 

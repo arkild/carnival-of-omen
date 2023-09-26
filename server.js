@@ -84,5 +84,5 @@ app.use('/magicshow', magicCtrl)
 //404 Route
 //Has to be at the ABSOLUTE BOTTOM or it soaks up everything, even the controllers
 app.get('/*', function(req, res) {
-    res.send('Are you lost? 404.')
+    res.render('404')
 })

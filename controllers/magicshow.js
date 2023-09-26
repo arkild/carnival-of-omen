@@ -37,7 +37,7 @@ router.post('/magic', (req, res) => {
 // router.delete('/magic', (req, res) => {
 //     db.Magic.findByIdAndRemove(req.params.id)
 //         .then(subject => res.send(`Magic Mumbo Jumbo redirect here. But for now, ${subject.name} has been removed.`))
-//         .catch(() => res.send('insert 404 catch-all here'))
+//         .catch(() => res.render('404'))
 // })
 
 //Can't access this in server.js without doing this command here
