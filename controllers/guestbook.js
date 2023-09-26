@@ -17,14 +17,14 @@ router.get('/', function(req, res) {
 //New Route (localhost:3000/guestbook/new)
 //Purpose of this is to render a form for the user to fill out to add an entry to the guestbook.
 router.get('/new', (req, res) => {
-    res.send(`This will generate a form for guestbook entries`)
+    res.render('guestbook/new-entry')
 })
 
 //Create Route (localhost:3000/guestbook/create)
 //This route will create a new guestbook entry and then re-direct to the guestbook page.
 router.post('/', (req, res) => {
     db.Guestbook.create(req.body)
-        .then(entry => res.json(entry))
+        .then(() => res.redirect('guestbook/'))
 })
 
 //Edit route (localhost:3000/guestbook/edit/ID)

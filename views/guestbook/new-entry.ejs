@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('../partials/head.ejs', {title: `Sign the Guestbook`})
+        <%- include('../partials/head.ejs', {title: `Sign the Guestbook`}) %>
         <!-- <link rel="stylesheet" href="*"> -->
     </head>
 
@@ -25,12 +25,15 @@
             <br>
 <!-- Did you have fun? (Yes/No). This is a dropdown but the dropdown only has one choice, which is "Yes".-->
             <label for="haveFun">Did you have fun?</label>
+            <select id="haveFun" name="haveFun">
             <optgroup label="Please select:">
                 <option value="Yes">Yes</option>
             </optgroup>
+            </select>
+            <br>
 <!-- Tell us about your experience -->
-            <label for="description">Tell us about your experience!</label>
-            <textarea type="text" id="description" name="description"></textarea>
+            <label for="description">Tell us about your experience!</label><br>
+            <textarea type="text" id="description" name="description">This is the best place in the world and I can't wait to come back!</textarea>
             <br>
             <input type="submit" value="Submit">
         </form>
