@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const livereload = require('livereload');
 const connectLiveReload = require('connect-livereload');
+const methodOverride = require('method-override');
 
 //This requires the routes in the controllers folder
 const guestCtrl = require('./controllers/guestbook')
@@ -33,9 +34,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'))
 //This is for livereload
 app.use(connectLiveReload());
-
 //request.body parser to use for post/put/patch.
 app.use(express.urlencoded({extended: true}));
+//This changes post requests to other requests of our choosing
+app.use(methodOverride('_method'));
 
 //Mount Routes (The ones not in controllers)
 //Home Page

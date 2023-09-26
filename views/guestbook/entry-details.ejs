@@ -4,10 +4,21 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs', {title: `${entry.name}'s review`}) %>
+    <%- include('../partials/head.ejs', {title: `${entry.name}'s entry`}) %>
+    <link rel="stylesheet" href="/styles/entry-details.css">
 </head>
 
+<body>
+    <%- include('../partials/nav.ejs') %>
 <!-- The Entry Details view will show Name and Title, as well as whether or not they had fun, the description of the review,  and the date the review was added. -->
+    <div>
+        <h2><%= entry.entryTitle %></h2>
+        <p>by <%= entry.name %> on <%= entry.dateAdded.toLocaleDateString("en-US") %></p>
+        <p><strong>Did you have fun?</strong><i> <%= entry.haveFun %></i> </p>
+        <p><%= entry.description %> </p>
 
+    </div>
+
+</body>
 
 </html>
