@@ -1,5 +1,35 @@
 <!-- This view is a list of all of the guestbook entries and a brief snippet about each one. This will be the first page someone sees when they browse to the "guestbook" section. -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <%- include('../partials/head.ejs', {title: `The Guestbook`}) %>
+    <!-- <link rel="stylesheet" href="/styles/entry-index.ejs" 
+    No CSS file for this right now -->
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <main>
+        <section class="guestbook-entries">
+            <ul>
+                <% for (let entry of entries) {%>
+                <div class="entryblock">
+                    <li>
+                        <h4><%= entry.entryTitle %></h4>
+                        <p><%= entry.name %>, <%= entry.dateAdded.toLocaleDateString("en-US") %></p> <!-- This method spits out MM/DD/YYYY. -->
+                        <a href="/guestbook/<%= entry._id %>">Details</a>
+                    </li>
+                </div>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>
 
 <!-- We'll have about 3 or 4 different entries, all good except one which will be from a Frad who said he didn't have fun. As a result, he's part of the magic show and we'll be making him disappear in the demonstration. -->
 <!-- The index will only show the name and the title of the entry. -->

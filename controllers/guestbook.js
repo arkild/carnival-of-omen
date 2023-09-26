@@ -11,7 +11,7 @@ const db = require('../models')
 //Index Route (localhost:3000/guestbook)
 router.get('/', function(req, res) {
     db.Guestbook.find({})
-        .then(entries => res.json(entries))
+        .then((entries) => res.render('guestbook/entry-index', {entries: entries}))
 })
 
 //New Route (localhost:3000/guestbook/new)
