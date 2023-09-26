@@ -9,7 +9,7 @@ A full-stack web application with attractions, magic, and a guestbook
 | /guestbook          | index      | GET       | read         | entry-index.ejs   | No           |**Yes**       |
 | /guestbook/:id      | show       | GET       | read         | entry-details.ejs | No           |**Yes**       |
 | /guestbook/:id      | update     | PATCH/PUT | update       |                   | *N/A*        |**Yes**       |
-| /guestbook/:id      | destroy    | DELETE    | delete       |                   | *N/A*        |              |
+| /guestbook/:id      | destroy    | DELETE    | delete       |                   | *N/A*        |**Yes**       |
 | /guestbook/new      | new        | GET       |              | new-entry.ejs     | No           |**Yes**       |
 | /guestbook          | create     | POST      | create       |                   | *N/A*        |**Yes**       |
 | /guestbook/:id/edit | edit       | GET       | read         | edit-entry.ejs    | No           |**Yes**       |
@@ -17,7 +17,7 @@ A full-stack web application with attractions, magic, and a guestbook
 | /magicshow          | index      | GET       | read         | magicshow.ejs     | No           |**Yes**       |
 | /magicshow/creation | new        | GET       |              | new-creation.ejs  | No           |**Yes**       |
 | /magicshow/magic    | create     | POST      | create       | hocuspocus.ejs    | No           |**Yes**       |
-| /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |              |
+| /magicshow/magic    | destroy    | DELETE    | delete       | hocuspocus.ejs    | No           |***TABLED***  |
 | /*                  |            | GET       |              | 404.ejs           | No           |**Yes**       |
 
 ## Credits
