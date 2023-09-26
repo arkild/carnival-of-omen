@@ -45,7 +45,7 @@ app.get('/', function(req, res) {
 
 //The main menu or amusement selection
 app.get('/attractions', function(req, res) {
-    res.send('This will be the page for attractions.')
+    res.render('attractions')
 })
 
 
