@@ -30,6 +30,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Middleware
+
 //This is for CSS and my images/assets
 app.use(express.static('public'))
 //This is for livereload

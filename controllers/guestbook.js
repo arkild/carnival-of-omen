@@ -50,7 +50,7 @@ router.put('/:id', (req, res) => {
 //This will delete the entry. Afterwards we'll set up a redirect.
 router.delete('/:id', (req, res) => {
     db.Guestbook.findByIdAndRemove(req.params.id)
-        .then(entry => res.send(`Successfully removed ${entry.name}'s entry from the guestbook.`))
+        .then(() => res.redirect('/guestbook'))
         .catch(() => res.render('404'))
 })
 

@@ -11,13 +11,16 @@
 <body>
     <%- include('../partials/nav.ejs') %>
 <!-- The Entry Details view will show Name and Title, as well as whether or not they had fun, the description of the review,  and the date the review was added. -->
-    <div>
+    <div class="entryblock">
         <h2><%= entry.entryTitle %></h2>
         <p>by <%= entry.name %> on <%= entry.dateAdded.toLocaleDateString("en-US") %></p>
         <p><strong>Did you have fun?</strong><i> <%= entry.haveFun %></i> </p>
         <p><%= entry.description %> </p>
-
     </div>
+    <section class="adminblock">
+        <button class="btn"><a href="/guestbook/<%= entry._id %>/edit">Edit</a></button>
+        <form method="POST" action="/guestbook/<%= entry._id %>?_method=DELETE"><input class="btn" type="submit" value="Delete" /></form>
+    </section>
 
 </body>
 
