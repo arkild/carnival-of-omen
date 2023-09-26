@@ -27,6 +27,24 @@ router.post('/', (req, res) => {
         .then(entry => res.json(entry))
 })
 
+//Edit route (localhost:3000/guestbook/edit/ID)
+//This edits a particular ID that you pick from the guestbook list.
+router.get('/:id/edit', (req, res) => {
+    db.Guestbook.findById(req.params.id)
+        .then(entry => res.send(`This will show the editing details for ${entry.name}'s entry.`))
+})
+
+//Update route (localhost:3000/guestbook/ID)
+//After updating, this re-directs the user back to the page with the ID so you can see the changes made.
+router.put('/:id', (req, res) => {
+    db.Guestbook.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    )
+        .then(entry => res.json(entry))
+})
+
 //Show Route (localhost:3000/guestbook/ID)
 //The ID is a wildcard eater, so it has to go below all routes that are specific.
 router.get('/:id', function (req, res) {
