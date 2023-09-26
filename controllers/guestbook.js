@@ -59,6 +59,7 @@ router.delete('/:id', (req, res) => {
 router.get('/:id', function (req, res) {
     db.Guestbook.findById(req.params.id)
         .then(entry => res.json(entry))
+        //This is returning 'null' currently. When we get to rendering pages, we'll see what happens.
         .catch(() => res.send('404: Page not found'))
 })
 
