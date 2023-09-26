@@ -24,9 +24,10 @@ guestbook: [
         name: "Frad",
         entryTitle: "What is this nonsense?",
         haveFun: "No",
-        description: "What a creepy place. I'm getting really weird vibes from it and have been on edge since I arrived. As soon as I'm done writing this entry, I'm out of here and never coming back!"
+        description: "What a creepy place. I'm getting really weird vibes from it and have been on edge since I arrived. As soon as I'm done writing this entry, I'm out of here and never coming back!",
+        dateAdded: "2023-08-01"
     }],
-    
+
 subjects:[
     {
         name: "Lenny",

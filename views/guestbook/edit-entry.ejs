@@ -1,6 +1,42 @@
 <!-- This is the view the user will see when they are editing an entry in the guestbook -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs', {title: `Sign the Guestbook`}) %>
+        <!-- <link rel="stylesheet" href="*"> -->
+    </head>
 
+    <body>
+        <%- include('../partials/nav.ejs') %>
+
+        <section class="topofpage">
+            <h1>Edit the entry!</h1>
+            <h3>Let's make some adjustments to this entry, shall we?</h3>
+        </section>
+
+        <form method="POST" action="/guestbook/<%= entry._id %>?_method=PUT">
 <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%=entry.name %>" required>
+            <br>
 <!-- Title of entry -->
-<!-- Did you have fun? (Yes/No). Unlike the new entry view, this dropdown will give us the choices between yes and no. -->
+            <label for="entryTitle">Title of Entry:</label>
+            <input type="text" id="entry-title" name="entryTitle" value="<%=entry.entryTitle %>" required>
+            <br>
+<!-- Did you have fun? (Yes/No). This one will actually have a choice.-->
+            <label for="haveFun">Did you have fun?</label>
+            <select id="haveFun" name="haveFun">
+            <optgroup label="Please select:">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </optgroup>
+            </select>
+            <br>
 <!-- Tell us about your experience -->
+            <label for="description">Tell us about your experience!</label><br>
+            <textarea type="text" id="description" name="description"><%= entry.description %></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
 //This edits a particular ID that you pick from the guestbook list.
 router.get('/:id/edit', (req, res) => {
     db.Guestbook.findById(req.params.id)
-        .then(entry => res.send(`This will show the editing details for ${entry.name}'s entry.`))
+        .then(entry => res.render('guestbook/edit-entry', {entry: entry}))
         .catch(() => res.render('404'))
 })
 
@@ -43,7 +43,7 @@ router.put('/:id', (req, res) => {
         req.body,
         { new: true }
     )
-        .then(entry => res.json(entry))
+        .then(entry => res.redirect(entry._id))
 })
 
 //Destroy route (localhost:3000/guestbook/ID)
