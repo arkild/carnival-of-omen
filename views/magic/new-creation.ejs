@@ -1,5 +1,34 @@
 <!-- This page will produce a small form for someone to make something. -->
-
+<!DOCTYPE html>
+<html lang="en">
 <!-- Name -->
 <!-- Species (That way we can just pre-select animals) -->
 <!-- Color, maybe? (we could either pick a flat, mono-colored image and then swap the colors around in CSS much like we did for Robin's icons on her portfolio project.) -->
+<head>
+    <%- include('../partials/head.ejs', {title: `Make some magic`}) %>
+    <!-- <link rel="stylesheet" href="/styles/new-creation.css"> -->
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="topofpage">
+        <h1> Work your own magic! </h1>
+        <h3> You're the magician in this carnival. Let's see you make something appear out of thin air! </h3>
+    </section>
+
+    <form action="/magicshow/magic" method="POST">
+        <label for="name">Creation name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="">Species:</label>
+            <select id="combo" name="">
+                <option value='{"species": "Rabbit","image":`/assets/rabbit.png`}'>Rabbit</option>
+                <option value='{"species": "Cat","image":`/assets/cat.png`}'>Cat</option>
+                <option value='{"species": "Parking Ticket","image":`/assets/ticket.png`}'>Parking Ticket</option>
+                <option value='{"species": "Zebra","image":`/assets/zebra.png`}'>Zebra</option>
+            </select><br>
+            <input type="submit" value="Work the magic!">
+
+    </form>
+
+</body>

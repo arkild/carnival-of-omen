@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 
 //New Route (localhost:3000/magicshow/creation)
 router.get('/creation', (req, res) => {
-    res.send(`This will redirect to a page for making magic show participants.`)
+    res.render('magic/new-creation')
 })
 
 //Create Route (localhost:3000/magicshow/magic)
@@ -30,13 +30,11 @@ router.post('/magic', (req, res) => {
 //We're not showing details on this controller, so a Show route is not required.
 //We're also not editing our subjects. We're either making them appear or disappear. That's it.
 
-//WE'RE TABLING THIS BELOW FOR NOW. I want to have the delete route attached directly to the index page, which is something we haven't done before yet. As a result, I might have to ask Scott or Justin a conceptual question involving how to associate the ID I need to delete with the request without attaching it to a specific page to do it first.
-
 //Destroy route (localhost:3000/magicshow/ID)
 //This will delete the entry. Afterwards we'll set up a redirect.
 router.delete('/magic/:id', (req, res) => {
     db.Magic.findByIdAndRemove(req.params.id)
-        .then(subject => res.send(`Magic Mumbo Jumbo redirect here. But for now, ${subject.name} has been removed.`))
+        .then(() => res.render('/magic/magicshow'))
         .catch(() => res.render('404'))
 })
 
