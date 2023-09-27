@@ -34,7 +34,7 @@ router.post('/magic', (req, res) => {
 //This will delete the entry. Afterwards we'll set up a redirect.
 router.delete('/magic/:id', (req, res) => {
     db.Magic.findByIdAndRemove(req.params.id)
-        .then(() => res.render('/magic/magicshow'))
+        .then(() => res.render('magic/hocuspocus'))
         .catch(() => res.render('404'))
 })
 
