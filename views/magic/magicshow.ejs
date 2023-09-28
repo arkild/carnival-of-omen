@@ -8,25 +8,25 @@
 </head>
 
 <body>
-<div class="carnival-picture"></div>
     <%- include('../partials/nav.ejs') %>
-    <section class="titlecard">
-        <h1>Welcome to the Magic Show!</h1>
-        <h3>Here you can make things appear and disappear before your very eyes!</h3>
+    <div class="content">
+    <section class="hero">
+        <h1 class="title">Welcome to the Magic Show!</h1>
+        <h3 class="subtitle">Here you can make things appear and disappear before your very eyes!</h3>
         <a href="magicshow/creation">Check out over here if you want to make your own creation!</a>
     </section>
 
     <main>
-        <section class="subjects">
-            <ul>
+        <section class="subjects container">
+            <ul class="victims">
                 <% for (let subject of subjects) { %>
-                    <div class="victims">
+                    <div>
                         <li>
-                            <figure class="victim">
-                                <img src="<%= subject.image %>">
-                                <figcaption>
+                            <figure class="victim card">
+                                <img src="<%= subject.image %>" class="image">
+                                <figcaption class="card-content">
                                     <h4><%= subject.name %> the <%= subject.species %></h4>
-                                    <form method="POST" action="magicshow/magic/<%=subject._id%>?_method=DELETE"><input class="btn" type="submit" value="Make Disappear" /></form>
+                                    <form method="POST" action="magicshow/magic/<%=subject._id%>?_method=DELETE"><input class="btn button is-danger" type="submit" value="Make Disappear" /></form>
                                 </figcaption>
                             </figure>
                         </li>
@@ -36,6 +36,7 @@
             
         </section>
     </main>
+    </div>
 
 
 </body>

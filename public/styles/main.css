@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
+
 * {
     border: 1px dotted black;
 }
@@ -12,11 +14,40 @@
     z-index: -1;
 } */
 
-body {
-    background-image: url("../assets/carnival-background.jpg");
+html {
+    background-image: url("../assets/carnival.jpg");
     backdrop-filter: blur(1px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: blueviolet;
+    height: 100%;
+    background-attachment: fixed;
 }
+
+.navbar, .content {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(250, 174, 22, 0.47);
+    margin-top: 1%;
+    border-radius: 2%;
+}
+
+/* .subjects {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.victims {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+} */
+
+ul > div {
+    list-style: none;
+}
+
 
