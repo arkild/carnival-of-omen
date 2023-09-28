@@ -16,13 +16,18 @@ const db = require('./models');
 const app = express();
 
 //This lets the browser refresh on nodemon restart.
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
+//If not running in a Dev environment, don't activate this.
+if (process.env.ON_HEROKU === "false") {
+    const liveReloadServer = livereload.createServer();
+    liveReloadServer.server.once("connection", () => {
     //The page will refresh when nodemon fully restarts
     setTimeout(() => {
         liveReloadServer.refresh("/");
     }, 100);
 });
+//This is for livereload
+app.use(connectLiveReload());
+}
 
 //Configure the app (app.set)
 app.set('view engine', 'ejs');
@@ -33,8 +38,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 //This is for CSS and my images/assets
 app.use(express.static('public'))
-//This is for livereload
-app.use(connectLiveReload());
 //request.body parser to use for post/put/patch.
 app.use(express.urlencoded({extended: true}));
 //This changes post requests to other requests of our choosing

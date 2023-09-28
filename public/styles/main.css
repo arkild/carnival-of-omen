@@ -1,6 +1,22 @@
 * {
     border: 1px dotted black;
 }
+/* .carnival-picture {
+    background-image: url("../assets/carnival.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+} */
+
 body {
-    background-color: rgb(174, 16, 174);
+    background-image: url("../assets/carnival-background.jpg");
+    backdrop-filter: blur(1px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
