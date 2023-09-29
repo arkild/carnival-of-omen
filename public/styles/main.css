@@ -1,17 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css";
 
-* {
+/* * {
     border: 1px dotted black;
-}
-/* .carnival-picture {
-    background-image: url("../assets/carnival.jpg");
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
 } */
 
 html {
@@ -20,7 +10,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blueviolet;
+    background-color: black;
     height: 100%;
     background-attachment: fixed;
 }
@@ -28,9 +18,10 @@ html {
 .navbar, .content {
     max-width: 900px;
     margin: auto;
-    background-color: rgba(250, 174, 22, 0.8);
+    background: rgb(250,174,22);
+    background: radial-gradient(circle, rgba(250,174,22,0.9) 0%, rgba(226,202,26,0.8) 100%);
     margin-top: 1%;
-    border-radius: 2%;
+    padding: 15px;
 }
 
 /* .subjects {

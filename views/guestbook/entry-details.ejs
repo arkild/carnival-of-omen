@@ -18,9 +18,13 @@
         <p><strong>Did you have fun?</strong><i> <%= entry.haveFun %></i> </p>
         <p><%= entry.description %> </p>
     </div>
-    <section class="adminblock">
-        <button class="btn"><a href="/guestbook/<%= entry._id %>/edit">Edit</a></button>
-        <form method="POST" action="/guestbook/<%= entry._id %>?_method=DELETE"><input class="btn" type="submit" value="Delete" /></form>
+    <section class="adminblock field is-grouped">
+        <div class="control">
+        <button class="btn button is-warning"><a href="/guestbook/<%= entry._id %>/edit">Edit</a></button>
+        </div>
+        <div class="control">
+        <form method="POST" action="/guestbook/<%= entry._id %>?_method=DELETE"><input class="btn button is-danger" type="submit" value="Delete" /></form>
+        </div>
     </section>
     <br>
     <a href="/guestbook/">Back to the Guestbook</a>
