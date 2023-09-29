@@ -1,0 +1,15 @@
+html {
+    backdrop-filter: blur(1px) brightness(70%) hue-rotate(106deg) saturate(573%) contrast(206%);
+}
+.filter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(1px) brightness(50%) saturate(385%) contrast(206%);
+}
+
+.content {
+    z-index: 2;
+    position: relative;
+}
