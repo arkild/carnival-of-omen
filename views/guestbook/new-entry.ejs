@@ -8,34 +8,49 @@
 
     <body>
         <%- include('../partials/nav.ejs') %>
-
+        <div class="content">
         <section class="topofpage">
-            <h1>Sign the Guestbook!</h1>
-            <h3>Go ahead and fill out this guestbook entry and tell us about your fun experience here!</h3>
+            <p class="is-size-3">Sign the Guestbook!</p>
+            <p class="is-size-5">Go ahead and fill out this guestbook entry and tell us about your fun experience here!</p>
         </section>
-
+        
         <form method="POST" action="/guestbook">
 <!-- Name -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
+            <div class="field">
+                <label class="label" for="name">Name:</label>
+                <div class="control">
+                <input class="input" type="text" id="name" name="name" required>
+                </div>
+            </div>
 <!-- Title of entry -->
-            <label for="entryTitle">Title of Entry:</label>
-            <input type="text" id="entry-title" name="entryTitle" required>
-            <br>
+            <div class="field">
+                <label class="label" for="entryTitle">Title of Entry:</label>
+                <div class="control">
+                <input class="input" type="text" id="entry-title" name="entryTitle" required>
+                </div>
+            </div>
 <!-- Did you have fun? (Yes/No). This is a dropdown but the dropdown only has one choice, which is "Yes".-->
-            <label for="haveFun">Did you have fun?</label>
-            <select id="haveFun" name="haveFun">
-            <optgroup label="Please select:">
-                <option value="Yes">Yes</option>
-            </optgroup>
-            </select>
-            <br>
+            <div class="field">
+                <label class="label" for="haveFun">Did you have fun?</label>
+                <div class="control">
+                    <div class="select">
+                    <select id="haveFun" name="haveFun">
+                    <optgroup label="Please select:">
+                        <option value="Yes">Yes</option>
+                    </optgroup>
+                    </select>
+                    </div>
+                </div>
+            </div>
 <!-- Tell us about your experience -->
-            <label for="description">Tell us about your experience!</label><br>
-            <textarea type="text" id="description" name="description">This is the best place in the world and I can't wait to come back!</textarea>
-            <br>
+            <div class="field">
+            <label class="label" for="description">Tell us about your experience!</label>
+            <div class="control">
+            <textarea class="textarea" type="text" id="description" name="description">This is the best place in the world and I can't wait to come back!</textarea>
+            </div>
             <input type="submit" value="Submit">
+            </div>
         </form>
+        </div>
     </body>
 </html>

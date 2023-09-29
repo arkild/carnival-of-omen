@@ -28,7 +28,7 @@ html {
 .navbar, .content {
     max-width: 900px;
     margin: auto;
-    background-color: rgba(250, 174, 22, 0.47);
+    background-color: rgba(250, 174, 22, 0.8);
     margin-top: 1%;
     border-radius: 2%;
 }
