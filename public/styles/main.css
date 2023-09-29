@@ -15,7 +15,7 @@ html {
     background-attachment: fixed;
 }
 
-.navbar, .content {
+.navigation, .content {
     max-width: 900px;
     margin: auto;
     background: rgb(250,174,22);

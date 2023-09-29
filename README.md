@@ -23,4 +23,5 @@ A full-stack web application with attractions, magic, and a guestbook
 ## Credits
 All magic show images are from stickpng.com, except for the rabbit image which is from purepng.com
 Carnival picture in background of websites attributed to Andres Ramos from vecteezy.com
+The Wheel used is from WheelDecide.com
 CSS Framework used: Bulma
