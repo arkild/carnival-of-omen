@@ -1,15 +1,43 @@
-html {
-    backdrop-filter: blur(1px) brightness(70%) hue-rotate(106deg) saturate(573%) contrast(206%);
-}
 .filter {
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1;
     backdrop-filter: blur(1px) brightness(50%) saturate(385%) contrast(206%);
+    animation: pulse 1.3s ease 0s infinite normal forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .content {
-    z-index: 2;
-    position: relative;
+    /* z-index: 2;
+    position: relative; */
+    /* ^This isn't required if the filter div wraps the content. */
+    background: rgb(244,78,26);
+background: radial-gradient(circle, rgba(244,78,26,0.9) 0%, rgba(199,91,50,0.8) 100%);
+    color: #CCCCCC;
+    margin: 0 auto;
+}
+
+@keyframes pulse {
+	0% {
+        backdrop-filter: blur(1px) brightness(50%) saturate(385%) contrast(206%);
+	}
+
+	17% {
+        backdrop-filter: blur(1px) brightness(60%) saturate(385%) contrast(206%);
+	}
+
+	30% {
+        backdrop-filter: blur(1px) brightness(50%) saturate(385%) contrast(206%);
+	}
+
+	50% {
+        backdrop-filter: blur(1px) brightness(60%) saturate(385%) contrast(206%);
+	}
+    80% {
+        backdrop-filter: blur(1px) brightness(50%) saturate(385%) contrast(206%);
+    }
 }
