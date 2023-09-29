@@ -41,4 +41,6 @@ ul > div {
     list-style: none;
 }
 
-
+.hero {
+    text-align: center;
+}

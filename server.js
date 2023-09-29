@@ -54,6 +54,10 @@ app.get('/attractions', function(req, res) {
     res.render('attractions')
 })
 
+app.get('/wheel', function(req, res) {
+    res.render('wheel')
+})
+
 
 
 //This gets the app to listen on the specified port we've documented in the environment file.

@@ -2,14 +2,22 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs', {title: `The Wheel Of Prizes`}) %>
-    <!-- <link rel="stylesheet" href="/styles/wheel.css"> -->
+    <%- include('./partials/head.ejs', {title: `The Wheel Of Prizes`}) %>
+    <link rel="stylesheet" href="/styles/wheel.css">
 </head>
 
 <body>
+    <%- include('./partials/nav.ejs') %>
     <main>
-    <%- include('../partials/nav.ejs') %>
-        <iframe src="https://wheeldecide.com/e.php?c1=Half-Meal+Voucher&c2=%242000+in+%28expired%3F%29+Gift+Cards&c3=Free+Weather+from+Walthur%27s+Weathers&c4=Spin+Again&c5=Free+Ticket+Back+Here&c6=Stuffed+Animal&c7=We+Stole+Your+Vehicle&cols=811bac,2378c3,15b6a3,31a51c,d8f226,e3801b,9d1717&t=CARNIVAL+OF+OMEN+WHEEL+OF+PRIZES&time=6" width="500" height="500" scrolling="no" frameborder="0"></iframe>
+        <div class="content">
+        <section class="hero">
+            <p class="title">Spin the Wheel of Prizes!</p>
+            <p class="subtitle">What will you win? What will you lose? Either way, it's bound to be fun!<p>
+        </section>
+        <div class="wheel">
+        <iframe id="wheel"src="https://wheeldecide.com/e.php?c1=Half-Meal+Voucher&c2=%242000+in+%28expired%3F%29+Coupons&c3=Free+Weather+from+Walthur%27s+Weathers&c4=Spin+Again&c5=Free+Ticket+Back+Here&c6=Stuffed+Animal&c7=We+Stole+Your+Vehicle&cols=811bac,2378c3,15b6a3,31a51c,d8f226,e3801b,9d1717&t=CARNIVAL+OF+OMEN+WHEEL+OF+PRIZES&time=6" width="500" height="500" scrolling="no" frameborder="0"></iframe>
+        </div>
+        </div>
     </main>
 </body>
 
