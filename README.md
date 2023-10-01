@@ -29,16 +29,23 @@ The two schema in this app are:
 
 I started off just making sure the Guestbook was ready to go, as that had all of the RESTful routes that I needed. As it was very similar to two exercises we had done in class, there wasn't much of an issue with getting things set up.
 
-The Magic show was a little more tricky as it contained images (which I gave all equal width to ensure some form of consistency) and that I was deleting objects directly from an index rather than through the item's details. I also had both the "create" and "destroy" route redirect to an intermediary page that simulated "magic" being performed.
+The Magic show was a little more tricky as it contained images (which I gave all equal width to ensure some form of consistency) and that I was deleting objects directly from an index rather than through the item's details. I also had both the "create" and "destroy" route redirect to an intermediary page that simulated "magic" being performed. I didn't realize that there was an HTML option to auto-redirect, which saved me a massive amount of time on how to figure out doing it via Javascript timeout functions.
 
 ## The future of this project
 
 Because of the app being carnival-themed, there are plenty of avenues that I can explore, such as adding more Javascript-interactible options like more Carnival games or other pieces of interactivity. 
 
-(If I haven't deleted this part by the time I submit this project, it means I didn't touch up on this readme to write down the things I am still going to plan to work on, and I should be ashamed of myself for forgetting to do this.)
+The "Test of Strength" page is deliberately out of commission to display the 404 filter and pulsating background, but I would be planning on having some sort of timing-related game where the closer someone is to clicking a button twice in an interval of 1 second.
+
+I'm also considering some sort of water-gun option where someone has to hold their mouse on a small, moving target. Whack-A-Mole is also an option as well.
+
+To add onto current pages, I'd want a clickable button for the "edit" and "delete" buttons to where, when it's clicked, it would display the "edit" and "delete" buttons. Admittedly, this would only take about 20 minutes to code, but the means on how to execute it are many and I'm simply undecided on how to tackle it.
+
+I'd also like to have a magic word typed into the magic show for immersion on the magic. App would check if the magic word is correct and then activate the route.
 
 ## Credits
 All magic show images are from stickpng.com, except for the rabbit image which is from purepng.com
 Carnival picture in background of websites attributed to Andres Ramos from vecteezy.com
+Frad's image is my friend. Online handle: Navi
 The Wheel used is from WheelDecide.com
 CSS Framework used: Bulma

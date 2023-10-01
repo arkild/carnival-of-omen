@@ -15,20 +15,31 @@
     <section class="topofpage">
         <p class="title"> Work your own magic! </p>
         <p class="subtitle"> You're the magician in this carnival. Let's see you make something appear out of thin air! </p>
+        <br>
     </section>
 
     <form action="/magicshow/magic" method="POST">
-        <label for="name">Creation name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="species">Species:</label>
-            <select id="combo" name="species">
-                <option value='Rabbit'>Rabbit</option>
-                <option value='Cat'>Cat</option>
-                <option value='Parking Ticket'>Parking Ticket</option>
-                <option value='Zebra'>Zebra</option>
-                <option value='Book'>Book</option>
-            </select><br>
-        <input type="submit" value="Work the magic!">
+        <div class="field">
+        <label class="label" for="name">Creation name:</label>
+            <div class="control">
+            <input class="input" type="text" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="field">
+        <label class="label" for="species">Species:</label>
+            <div class="control">
+                <div class="select">
+                <select id="combo" name="species">
+                    <option value='Rabbit'>Rabbit</option>
+                    <option value='Cat'>Cat</option>
+                    <option value='Parking Ticket'>Parking Ticket</option>
+                    <option value='Zebra'>Zebra</option>
+                    <option value='Book'>Book</option>
+                </select>
+            </div>
+            </div>
+        </div>
+        <input class="button is-link" type="submit" value="Work the magic!">
 
     </form>
     </div>
