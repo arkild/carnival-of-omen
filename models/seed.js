@@ -48,6 +48,11 @@ subjects:[
         name: "Camo",
         species: "Zebra",
         image: "/assets/zebra.png"
+    },
+    {
+        name: "Frad",
+        species: "Foolish Human",
+        image: "/assets/frad.jpeg"
     }]
 }
 
