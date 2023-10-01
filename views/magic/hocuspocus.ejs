@@ -5,14 +5,19 @@
 
 <head>
     <%- include ('../partials/head.ejs', {title: `Magic Working...`}) %>
-    <!-- <link rel="stylesheet" href="/styles/hocuspocus.css"> -->
+    <link rel="stylesheet" href="/styles/hocuspocus.css">
+    <!-- This auto-changes the page after 3 seconds -->
+    <meta http-equiv="refresh" content="3;url=/magicshow" />
 </head>
 
 <body>
-    <main>
-        <h1>The Magic Is Working...</h1>
-        <a href="/magicshow">Killswitch link for now</a>
+    <div class="container">
+    <main class="magictext">
+        <p class="is-size-1">The Magic Is Working...</p>
+        <!-- <a href="/magicshow">Killswitch link for now</a> 
+        I'll keep the killswitch link in case I need it later.-->
     </main>
+    </div>
 </body>
 
 

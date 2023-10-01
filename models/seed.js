@@ -6,7 +6,7 @@ guestbook: [
         name: "Patruck",
         entryTitle: "This was a blast!",
         haveFun: "Yes",
-        description: "The magic show was really cool! Even though there wasn't much else right now, I could see the construction sites and what they were working for, so I'm absolutely coming back!"
+        description: "The magic show was really cool! Even though there wasn't much else right now, I could see the construction sites and what they were working on, so I'm absolutely coming back!"
     },
     {
         name: "Miry",

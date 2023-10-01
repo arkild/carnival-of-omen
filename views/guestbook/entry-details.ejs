@@ -13,10 +13,11 @@
 <!-- The Entry Details view will show Name and Title, as well as whether or not they had fun, the description of the review,  and the date the review was added. -->
     <div class="content">
     <div class="entryblock">
-        <p><%= entry.entryTitle %></p>
-        <p>by <strong><%= entry.name %></strong> on <%= entry.dateAdded.toLocaleDateString("en-US") %></p>
-        <p><strong>Did you have fun?</strong><i> <%= entry.haveFun %></i> </p>
-        <p><%= entry.description %> </p>
+        <p class="is-size-3"><%= entry.entryTitle %></p>
+        <p class="is-size-5">by <strong><%= entry.name %></strong> on <%= entry.dateAdded.toLocaleDateString("en-US") %></p>
+        <p class="is-size-5"><strong>Did you have fun?</strong><i> <%= entry.haveFun %></i> </p>
+        <p class="is-size-5"><%= entry.description %> </p>
+        <br>
     </div>
     <section class="adminblock field is-grouped">
         <div class="control">
@@ -27,7 +28,7 @@
         </div>
     </section>
     <br>
-    <a href="/guestbook/">Back to the Guestbook</a>
+    <a href="/guestbook">Back to the Guestbook</a>
     </div>
 
 </body>

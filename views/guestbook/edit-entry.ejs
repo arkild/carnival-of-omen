@@ -8,35 +8,46 @@
 
     <body>
         <%- include('../partials/nav.ejs') %>
-
+        <div class="content">
         <section class="topofpage">
-            <h1>Edit the entry!</h1>
-            <h3>Let's make some adjustments to this entry, shall we?</h3>
+            <p class="is-size-3">Edit the entry!</p>
+            <p class="is-size-5">Let's make some adjustments to this entry, shall we?</p><br>
         </section>
 
         <form method="POST" action="/guestbook/<%= entry._id %>?_method=PUT">
 <!-- Name -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="<%=entry.name %>" required>
-            <br>
+            <div class="field">
+                <label class="label" for="name">Name:</label>
+                <input class="input" type="text" id="name" name="name" value="<%=entry.name %>" required>
+            </div>
 <!-- Title of entry -->
-            <label for="entryTitle">Title of Entry:</label>
-            <input type="text" id="entry-title" name="entryTitle" value="<%=entry.entryTitle %>" required>
-            <br>
+            <div class="field">
+                <label class="label" for="entryTitle">Title of Entry:</label>
+                <input class="input" type="text" id="entry-title" name="entryTitle" value="<%=entry.entryTitle %>" required>
+            </div>
 <!-- Did you have fun? (Yes/No). This one will actually have a choice.-->
-            <label for="haveFun">Did you have fun?</label>
-            <select id="haveFun" name="haveFun">
-            <optgroup label="Please select:">
-                <option value="No">No</option>
-                <option value="Yes">Yes</option>
-            </optgroup>
-            </select>
-            <br>
+            <div class="field">
+                <label class="label" for="haveFun">Did you have fun?</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="haveFun" name="haveFun">
+                            <optgroup label="Please select:">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                    </div>
+            </div>
 <!-- Tell us about your experience -->
-            <label for="description">Tell us about your experience!</label><br>
-            <textarea type="text" id="description" name="description"><%= entry.description %></textarea>
-            <br>
-            <input type="submit" value="Submit">
+            <div class="field">
+                <label for="description">Tell us about your experience!</label>
+                <div class="control">
+                    <textarea class="textarea" type="text" id="description" name="description"><%= entry.description %></textarea>
+                </div>
+                <input class="button is-link" type="submit" value="Submit">
+            </div>
         </form>
+        </div>
     </body>
 </html>
