@@ -1,6 +1,8 @@
 # carnival-of-omen
 A full-stack web application with attractions, magic, and a guestbook
 
+**Hosted on**: https://carnival-of-omen-389321841a94.herokuapp.com/
+
 ## Route Table:
 | URL                 | REST Route | HTTP Verb | CRUD Action  | EJS View(s)       | View Created?| Route tested?|
 |---------------------|------------|-----------|--------------|-------------------|--------------|--------------|
